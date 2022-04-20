@@ -22,11 +22,16 @@ namespace F1
 
         private void Form11_Load(object sender, EventArgs e)
         {
+            int cnt = 1;
+            foreach (var a in Form6.RedBull)
+            {
+                cnt++;
+            }
             var objChart = chart1.ChartAreas[0];
             objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
-            objChart.AxisX.Minimum = 1;
-            objChart.AxisX.Maximum = 5;
+            objChart.AxisX.Minimum = 0;
+            objChart.AxisX.Maximum = cnt;
 
             objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             objChart.AxisY.Minimum = 0;

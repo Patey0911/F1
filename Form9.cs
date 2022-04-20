@@ -29,7 +29,7 @@ namespace F1
             var objChart = chart2.ChartAreas[0];
             objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
-            objChart.AxisX.Minimum = 1;
+            objChart.AxisX.Minimum = 0;
             objChart.AxisX.Maximum = cnt;
 
             objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -116,7 +116,7 @@ namespace F1
             nume_echipa = "RedBull";
             if (checkBox1.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.RedBull)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -137,7 +137,7 @@ namespace F1
             nume_echipa = "Ferrari";
             if (checkBox2.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.Ferrari)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -158,7 +158,7 @@ namespace F1
             nume_echipa = "Mercedes";
             if (checkBox3.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.Mercedes)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -179,7 +179,7 @@ namespace F1
             nume_echipa = "McLaren";
             if (checkBox4.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.McLaren)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -200,7 +200,7 @@ namespace F1
             nume_echipa = "AlphaTauri";
             if (checkBox5.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.AlphaTauri)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -221,7 +221,7 @@ namespace F1
             nume_echipa = "AstonMartin";
             if (checkBox6.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.AstonMartin)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -242,7 +242,7 @@ namespace F1
             nume_echipa = "Alpine";
             if (checkBox7.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.Alpine)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -263,7 +263,7 @@ namespace F1
             nume_echipa = "AlfaRomeo";
             if (checkBox8.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.AlfaRomeo)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -284,7 +284,7 @@ namespace F1
             nume_echipa = "Haas";
             if (checkBox9.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.Haas)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);
@@ -305,7 +305,7 @@ namespace F1
             nume_echipa = "Williams";
             if (checkBox10.Checked == true)
             {
-                int cnt = 1;
+                int cnt = 0;
                 foreach (var a in Form6.Williams)
                 {
                     chart2.Series[nume_echipa].Points.AddXY(cnt, a);

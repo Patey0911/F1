@@ -83,35 +83,65 @@ namespace F1
         public void Curatenie()
         {
             Verstappen.Clear();
+            Verstappen.Add(0);
             Perez.Clear();
+            Perez.Add(0);
             Leclerc.Clear();
+            Leclerc.Add(0);
             Sainz.Clear();
+            Sainz.Add(0);
             Norris.Clear();
+            Norris.Add(0);  
             Ricciardo.Clear();
+            Ricciardo.Add(0);
             Hamilton.Clear();
+            Hamilton.Add(0);
             Russel.Clear();
+            Russel.Add(0);
             Gasly.Clear();
+            Gasly.Add(0);
             Tsunoda.Clear();
+            Tsunoda.Add(0);
             Alonso.Clear();
+            Alonso.Add(0);
             Ocon.Clear();
+            Ocon.Add(0);
             Vettel.Clear();
+            Vettel.Add(0);
             Stroll.Clear();
+            Stroll.Add(0);
             Magnussen.Clear();
+            Magnussen.Add(0);
             Schumacher.Clear();
+            Schumacher.Add(0);
             Latifi.Clear();
+            Latifi.Add(0);
             Albon.Clear();
+            Albon.Add(0);
             Bottas.Clear();
+            Bottas.Add(0);
             Zhou.Clear();
+            Zhou.Add(0);
             Ferrari.Clear();
+            Ferrari.Add(0);
             RedBull.Clear();
+            RedBull.Add(0);
             Mercedes.Clear();
+            Mercedes.Add(0);
             McLaren.Clear();
+            McLaren.Add(0);
             AlphaTauri.Clear();
+            AlphaTauri.Add(0);
             Alpine.Clear();
+            Alpine.Add(0);
             AlfaRomeo.Clear();
+            AlfaRomeo.Add(0);
             Williams.Clear();
+            Williams.Add(0);
             Haas.Clear();
+            Haas.Add(0);
             AstonMartin.Clear();
+            AstonMartin.Add(0);
         }
         public void calcul_puncte()
         {

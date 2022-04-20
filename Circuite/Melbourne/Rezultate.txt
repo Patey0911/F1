@@ -1,0 +1,23 @@
+1st Place: Leclerc
+2nd Place: Perez
+3rd Place: Russel
+4th Place: Hamilton
+5th Place: Norris
+6th Place: Ricciardo
+7th Place: Ocon
+8th Place: Albon
+9th Place: Bottas
+10th Place: Gasly
+11th Place: Zhou
+12th Place: Stroll
+13th Place: Schumacher
+14th Place: Magnussen
+15th Place: Tsunoda
+16th Place: Latifi
+17th Place: Alonso
+18th Place: Verstappen
+19th Place: Vettel
+20th Place: Sainz
+Pole: Leclerc(1:17.868)
+Fastest Lap: Leclerc(1:20.260)
+False

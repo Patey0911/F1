@@ -20,4 +20,5 @@
 20th Place: Gasly
 Pole: Leclerc(1:30.558)
 Fastest Lap: Leclerc(1:34.570)
-
+False
+100

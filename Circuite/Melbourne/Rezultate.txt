@@ -5,9 +5,9 @@
 5th Place: Norris
 6th Place: Ricciardo
 7th Place: Ocon
-8th Place: Albon
-9th Place: Bottas
-10th Place: Gasly
+8th Place: Bottas
+9th Place: Gasly
+10th Place: Albon
 11th Place: Zhou
 12th Place: Stroll
 13th Place: Schumacher
@@ -21,3 +21,4 @@
 Pole: Leclerc(1:17.868)
 Fastest Lap: Leclerc(1:20.260)
 False
+100

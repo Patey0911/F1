@@ -146,6 +146,7 @@ namespace F1
         public void calcul_puncte()
         {
             int poz_vect = 0;
+            int k;
             Curatenie();
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             DirectoryInfo path = new DirectoryInfo(path_desktop+"\\F1\\Circuite");
@@ -156,181 +157,425 @@ namespace F1
                 if (File.Exists(nume_director))
                 {
                     string[] lines = System.IO.File.ReadAllLines(path_desktop + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                    if (lines[23].Contains("100"))
+                        k = 1;
+                    else if (lines[23].Contains("75"))
+                        k = 2;
+                    else if (lines[23].Contains("50"))
+                        k = 3;
+                    else
+                        k = 4;
                     //Verstappen
                     string nume_pilot = "Verstappen";
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[0].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[0].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[0].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[0].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 6;
+                            lista_piloti[0].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 5;
+                            lista_piloti[0].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 4;
+                            lista_piloti[0].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 3;
+                            lista_piloti[0].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[0].Puncte = 2;
+                            lista_piloti[0].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[0].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[0].Puncte = 1;
                     }
                     Verstappen.Add(lista_piloti[0].puncte);
                     //Perez
                     nume_pilot = "Perez";
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[1].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[1].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[1].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[1].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 6;
+                            lista_piloti[1].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 5;
+                            lista_piloti[1].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 4;
+                            lista_piloti[1].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 3;
+                            lista_piloti[1].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[1].Puncte = 2;
+                            lista_piloti[1].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[1].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[1].Puncte = 1;
                     }
                     Perez.Add(lista_piloti[1].puncte);
                     RedBull.Add(lista_piloti[0].puncte + lista_piloti[1].puncte);
                     //Hamilton
                     nume_pilot = "Hamilton";
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[2].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[2].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[2].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[2].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 6;
+                            lista_piloti[2].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 5;
+                            lista_piloti[2].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 4;
+                            lista_piloti[2].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 3;
+                            lista_piloti[2].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[2].Puncte = 2;
+                            lista_piloti[2].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[2].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[2].Puncte = 1;
                     }
                     Hamilton.Add(lista_piloti[2].puncte);
 
                     //Russel
                     nume_pilot = "Russel";
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[3].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[3].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[3].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[3].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 6;
+                            lista_piloti[3].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 5;
+                            lista_piloti[3].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 4;
+                            lista_piloti[3].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 3;
+                            lista_piloti[3].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[3].Puncte = 2;
+                            lista_piloti[3].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[3].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[3].Puncte = 1;
                     }
                     Russel.Add(lista_piloti[3].puncte);
@@ -338,45 +583,104 @@ namespace F1
 
                     //Leclerc
                     nume_pilot = "Leclerc";
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[4].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[4].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[4].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[4].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 6;
+                            lista_piloti[4].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 5;
+                            lista_piloti[4].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 4;
+                            lista_piloti[4].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 3;
+                            lista_piloti[4].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[4].Puncte = 2;
+                            lista_piloti[4].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[4].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[4].Puncte = 1;
                     }
                     Leclerc.Add(lista_piloti[4].puncte);
@@ -384,45 +688,102 @@ namespace F1
                     //Sainz
                     nume_pilot = "Sainz";
                     int poz = 5;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
-                    if (lines[21].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Sainz.Add(lista_piloti[poz].puncte);
@@ -431,45 +792,104 @@ namespace F1
                     //Norris
                     nume_pilot = "Norris";
                     poz = 6;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Norris.Add(lista_piloti[poz].puncte);
@@ -477,45 +897,104 @@ namespace F1
                     //Ricciardo
                     nume_pilot = "Ricciardo";
                     poz = 7;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Ricciardo.Add(lista_piloti[poz].puncte);
@@ -524,45 +1003,104 @@ namespace F1
                     //Gasly
                     nume_pilot = "Gasly";
                     poz = 8;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Gasly.Add(lista_piloti[poz].puncte);
@@ -570,45 +1108,104 @@ namespace F1
                     //Tsunoda
                     nume_pilot = "Tsunoda";
                     poz = 9;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Tsunoda.Add(lista_piloti[poz].puncte);
@@ -617,45 +1214,104 @@ namespace F1
                     //Vettel
                     nume_pilot = "Vettel";
                     poz = 10;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Vettel.Add(lista_piloti[poz].puncte);
@@ -663,45 +1319,104 @@ namespace F1
                     //Stroll
                     nume_pilot = "Stroll";
                     poz = 11;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Stroll.Add(lista_piloti[poz].puncte);
@@ -710,45 +1425,104 @@ namespace F1
                     //Bottas
                     nume_pilot = "Bottas";
                     poz = 12;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Bottas.Add(lista_piloti[poz].puncte);
@@ -756,45 +1530,104 @@ namespace F1
                     //Zhou
                     nume_pilot = "Zhou";
                     poz = 13;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Zhou.Add(lista_piloti[poz].puncte);
@@ -803,45 +1636,104 @@ namespace F1
                     //Schumacher
                     nume_pilot = "Schumacher";
                     poz = 14;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Schumacher.Add(lista_piloti[poz].puncte);
@@ -849,45 +1741,104 @@ namespace F1
                     //Magnussen
                     nume_pilot = "Magnussen";
                     poz = 15;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Magnussen.Add(lista_piloti[poz].puncte);
@@ -896,45 +1847,104 @@ namespace F1
                     //Alonso
                     nume_pilot = "Alonso";
                     poz = 16;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Alonso.Add(lista_piloti[poz].puncte);
@@ -942,45 +1952,104 @@ namespace F1
                     //Ocon
                     nume_pilot = "Ocon";
                     poz = 17;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Ocon.Add(lista_piloti[poz].puncte);
@@ -989,45 +2058,104 @@ namespace F1
                     //Latifi
                     nume_pilot = "Latifi";
                     poz = 18;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Latifi.Add(lista_piloti[poz].puncte);
@@ -1035,45 +2163,104 @@ namespace F1
                     //Albon
                     nume_pilot = "Albon";
                     poz = 19;
-                    if (lines[0].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 25;
-                    else if (lines[1].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 18;
-                    else if (lines[2].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 15;
-                    else if (lines[3].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 12;
-                    else if (lines[4].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 10;
-                    else if (lines[5].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 8;
-                    else if (lines[6].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 6;
-                    else if (lines[7].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 4;
-                    else if (lines[8].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 2;
-                    else if (lines[9].Contains(nume_pilot) == true)
-                        lista_piloti[poz].Puncte = 1;
+                    switch (k)
+                    {
+                        case 1:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 25;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 18;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 15;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 2:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 19;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 14;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 12;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[9].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 3:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 13;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 10;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 8;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 5;
+                            else if (lines[5].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[6].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[7].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[8].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                        case 4:
+                            if (lines[0].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 6;
+                            else if (lines[1].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 4;
+                            else if (lines[2].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 3;
+                            else if (lines[3].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 2;
+                            else if (lines[4].Contains(nume_pilot) == true)
+                                lista_piloti[poz].Puncte = 1;
+                            break;
+                    }
                     if (lines[21].Contains(nume_pilot) == true)
                         lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
-                        if (lines[23].Contains(nume_pilot) == true)
+                        if (lines[24].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 8;
-                        else if (lines[24].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 7;
                         else if (lines[25].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 6;
+                            lista_piloti[poz].Puncte = 7;
                         else if (lines[26].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 5;
+                            lista_piloti[poz].Puncte = 6;
                         else if (lines[27].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 4;
+                            lista_piloti[poz].Puncte = 5;
                         else if (lines[28].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 3;
+                            lista_piloti[poz].Puncte = 4;
                         else if (lines[29].Contains(nume_pilot) == true)
-                            lista_piloti[poz].Puncte = 2;
+                            lista_piloti[poz].Puncte = 3;
                         else if (lines[30].Contains(nume_pilot) == true)
+                            lista_piloti[poz].Puncte = 2;
+                        else if (lines[31].Contains(nume_pilot) == true)
                             lista_piloti[poz].Puncte = 1;
                     }
                     Albon.Add(lista_piloti[poz].puncte);

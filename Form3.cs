@@ -48,6 +48,7 @@ namespace F1
             textBox21.Font = SmallFont;
             textBox22.Font = SmallFont;
             k = false;
+            radioButton1.Select();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,9 +60,9 @@ namespace F1
             nume_pilot[4] = "5th Place: " + textBox5.Text;
             nume_pilot[5] = "6th Place: " + textBox6.Text;
             nume_pilot[6] = "7th Place: " + textBox7.Text;
-            nume_pilot[7] = "8th Place: " + textBox8.Text;
-            nume_pilot[8] = "9th Place: " + textBox9.Text;
-            nume_pilot[9] = "10th Place: " + textBox10.Text;
+            nume_pilot[7] = "8th Place: " + textBox9.Text;
+            nume_pilot[8] = "9th Place: " + textBox10.Text;
+            nume_pilot[9] = "10th Place: " + textBox8.Text;
             nume_pilot[10] = "11th Place: " + textBox20.Text;
             nume_pilot[11] = "12th Place: " + textBox19.Text;
             nume_pilot[12] = "13th Place: " + textBox18.Text;
@@ -88,6 +89,14 @@ namespace F1
                 for(int i=0;i<=21;i++)
                     sw.WriteLine(nume_pilot[i]);
                 sw.WriteLine(k);
+                if (radioButton1.Checked == true)
+                    sw.WriteLine(100);
+                else if (radioButton2.Checked == true)
+                    sw.WriteLine(75);
+                else if (radioButton3.Checked == true)
+                    sw.WriteLine(50);
+                else if (radioButton4.Checked == true)
+                    sw.WriteLine(25);
             }
             if (k==true)
             {

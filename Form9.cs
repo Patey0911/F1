@@ -20,7 +20,7 @@ namespace F1
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            int cnt = 1;
+            int cnt = 0;
             foreach (var a in Form6.RedBull)
             {
                 cnt++;
@@ -34,7 +34,7 @@ namespace F1
 
             objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             objChart.AxisY.Minimum = 0;
-            objChart.AxisY.Maximum = 120;
+            objChart.AxisY.Maximum = 150;
 
             chart2.Series.Clear();
             string nume_echipa;

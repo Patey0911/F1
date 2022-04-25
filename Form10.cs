@@ -75,14 +75,14 @@ namespace F1
                 label7.Font = SmallFont;
                 label8.Font = SmallFont;
 
-                textBox1.Text = lines[23];
-                textBox2.Text = lines[24];
-                textBox3.Text = lines[25];
-                label4.Text = lines[26];
-                label5.Text = lines[27];
-                label6.Text = lines[28];
-                label7.Text = lines[29];
-                label8.Text = lines[30];
+                textBox1.Text = lines[24];
+                textBox2.Text = lines[25];
+                textBox3.Text = lines[26];
+                label4.Text = lines[27];
+                label5.Text = lines[28];
+                label6.Text = lines[29];
+                label7.Text = lines[30];
+                label8.Text = lines[31];
 
                 string nume_pilot = "Verstappen.png";
                 System.Drawing.Image img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));

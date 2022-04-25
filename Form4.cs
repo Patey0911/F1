@@ -117,9 +117,9 @@ namespace F1
 
                 if (lines[22].Contains("True") == true)
                 {
-                    label23.Text = lines[23];
-                    label24.Text = lines[24];
-                    label25.Text = lines[25];
+                    label23.Text = lines[24];
+                    label24.Text = lines[25];
+                    label25.Text = lines[26];
                     button1.Enabled = true;
                 }
                 else

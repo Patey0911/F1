@@ -45,6 +45,7 @@ namespace F1
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace F1
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.Location = new System.Drawing.Point(483, 520);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(400, 62);
+            this.button2.Size = new System.Drawing.Size(240, 62);
             this.button2.TabIndex = 2;
             this.button2.Text = "Drivers Rankings";
             this.button2.UseVisualStyleBackColor = true;
@@ -83,7 +84,7 @@ namespace F1
             this.button3.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.Location = new System.Drawing.Point(483, 588);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(400, 62);
+            this.button3.Size = new System.Drawing.Size(500, 62);
             this.button3.TabIndex = 3;
             this.button3.Text = "Constructors Rankings";
             this.button3.UseVisualStyleBackColor = true;
@@ -148,9 +149,9 @@ namespace F1
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(572, 656);
+            this.button5.Location = new System.Drawing.Point(611, 656);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(224, 55);
+            this.button5.Size = new System.Drawing.Size(240, 55);
             this.button5.TabIndex = 29;
             this.button5.Text = "Show Results";
             this.button5.UseVisualStyleBackColor = true;
@@ -180,12 +181,24 @@ namespace F1
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button6.Location = new System.Drawing.Point(743, 520);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(240, 62);
+            this.button6.TabIndex = 32;
+            this.button6.Text = "Drivers Evolution";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1019, 747);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
@@ -228,6 +241,7 @@ namespace F1
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button6;
     }
 }
 

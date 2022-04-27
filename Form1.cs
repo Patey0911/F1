@@ -348,6 +348,10 @@ namespace F1
             pictureBox1.Image = imageList1.Images[22];
         }
 
-
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form f11 = new Form11();
+            f11.Show();
+        }
     }
 }

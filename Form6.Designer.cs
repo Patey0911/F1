@@ -318,7 +318,7 @@ namespace F1
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(823, 414);
+            this.label13.Location = new System.Drawing.Point(815, 414);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 16);
             this.label13.TabIndex = 20;
@@ -327,7 +327,7 @@ namespace F1
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(742, 266);
+            this.pictureBox7.Location = new System.Drawing.Point(734, 266);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(140, 140);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -337,7 +337,7 @@ namespace F1
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(739, 414);
+            this.label14.Location = new System.Drawing.Point(731, 414);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 16);
             this.label14.TabIndex = 18;
@@ -405,7 +405,7 @@ namespace F1
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(823, 609);
+            this.label19.Location = new System.Drawing.Point(815, 609);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 16);
             this.label19.TabIndex = 35;
@@ -414,7 +414,7 @@ namespace F1
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(742, 461);
+            this.pictureBox10.Location = new System.Drawing.Point(734, 461);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(140, 140);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -424,7 +424,7 @@ namespace F1
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(739, 609);
+            this.label20.Location = new System.Drawing.Point(731, 609);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(51, 16);
             this.label20.TabIndex = 33;
@@ -550,7 +550,7 @@ namespace F1
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(823, 819);
+            this.label29.Location = new System.Drawing.Point(815, 819);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(51, 16);
             this.label29.TabIndex = 50;
@@ -559,7 +559,7 @@ namespace F1
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(742, 671);
+            this.pictureBox15.Location = new System.Drawing.Point(734, 671);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(140, 140);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -569,7 +569,7 @@ namespace F1
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(739, 819);
+            this.label30.Location = new System.Drawing.Point(731, 819);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(51, 16);
             this.label30.TabIndex = 48;

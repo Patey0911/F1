@@ -31,7 +31,7 @@ namespace F1
         private void Form11_Load(object sender, EventArgs e)
         {
                 var objChart = chart1.ChartAreas[0];
-                //objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
                 int cnt = 0;
                 foreach (var a in Form6.RedBull)
@@ -42,7 +42,7 @@ namespace F1
                 objChart.AxisX.Minimum = 1;
                 objChart.AxisX.Maximum = cnt;
 
-                //objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
                 objChart.AxisY.Minimum = 1;
                 objChart.AxisY.Maximum = 20;
                 chart1.ChartAreas[0].AxisY.IsReversed = true;

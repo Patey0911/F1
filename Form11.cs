@@ -30,22 +30,27 @@ namespace F1
 
         private void Form11_Load(object sender, EventArgs e)
         {
-                var objChart = chart1.ChartAreas[0];
-                objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            var objChart = chart1.ChartAreas[0];
+            objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
 
-                int cnt = 0;
-                foreach (var a in Form6.RedBull)
-                {
-                    cnt++;
-                }
+            int cnt = 0;
+            foreach (var a in Form6.RedBull)
+            {
+                cnt++;
+            }
+            cnt--;
 
-                objChart.AxisX.Minimum = 1;
-                objChart.AxisX.Maximum = cnt;
+            objChart.AxisX.Minimum = 1;
+            objChart.AxisX.Maximum = cnt;
 
-                objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-                objChart.AxisY.Minimum = 1;
-                objChart.AxisY.Maximum = 20;
-                chart1.ChartAreas[0].AxisY.IsReversed = true;
+            objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            objChart.AxisY.Minimum = 1;
+            objChart.AxisY.Maximum = 20;
+            chart1.ChartAreas[0].AxisY.IsReversed = true;
+            objChart.AxisY.RoundAxisValues();
+
+            objChart.AxisX.Name = "Curse";
+            
 
                 chart1.Series.Clear();
 
@@ -246,6 +251,7 @@ namespace F1
                         else if (lines[19].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 20);
                         cnt++;
+                        
                     }
                 }
             }

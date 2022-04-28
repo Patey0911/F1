@@ -25,6 +25,7 @@ namespace F1
             {
                 cnt++;
             }
+            cnt--;
             int wid = 4;
             var objChart = chart2.ChartAreas[0];
             objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;

@@ -30,7 +30,7 @@ namespace F1
             {
                 cnt++;
             }
-
+            cnt--;
             objChart.AxisX.Minimum = 0;
             objChart.AxisX.Maximum = cnt;
 

@@ -13,7 +13,7 @@ namespace F1
 {
     public partial class Form12 : Form
     {
-        public Font SmallFont = new Font("Bahnschrift", 11);
+        public Font SmallFont = new Font("Bahnschrift", 10);
         public Form12()
         {
             InitializeComponent();
@@ -120,6 +120,83 @@ namespace F1
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
             pictureBox6.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox7.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox7.Text = "Michael Schumacher";
+
+            nume_pilot = textBox7.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox7.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox8.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox8.Text = "Fernando Alonso";
+
+            nume_pilot = textBox8.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox8.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox8.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox8.Text = "Fernando Alonso";
+
+            nume_pilot = textBox8.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox8.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox9.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox9.Text = "Lewis Hamilton";
+
+            nume_pilot = textBox9.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox9.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox10.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox10.Text = "Sebastian Vettel";
+
+            nume_pilot = textBox10.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox10.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox11.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox11.Text = "Nico Rosberg";
+
+            nume_pilot = textBox11.Text + ".jpeg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox11.Image = imageList1.Images[poz_img];
+            poz_img++;
+
+            textBox12.Font = new Font(SmallFont, FontStyle.Bold);
+            textBox12.Text = "Max Verstappen";
+
+            nume_pilot = textBox12.Text + ".jpg";
+            img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
+            b = new Bitmap(img);
+            i = resizeImage(b, new Size(1000, 1000));
+            imageList1.Images.Add(i);
+            pictureBox12.Image = imageList1.Images[poz_img];
             poz_img++;
         }
     }

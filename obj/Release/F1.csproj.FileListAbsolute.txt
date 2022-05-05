@@ -20,3 +20,4 @@ C:\Users\mihal\Desktop\F1\obj\Release\F1.csproj.SuggestedBindingRedirects.cache
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form10.resources
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form11.resources
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form12.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form13.resources

@@ -13,6 +13,7 @@ namespace F1
 {
     public partial class Form12 : Form
     {
+        public static string numepasat;
         public Font SmallFont = new Font("Bahnschrift", 10);
         public Form12()
         {
@@ -198,6 +199,102 @@ namespace F1
             imageList1.Images.Add(i);
             pictureBox12.Image = imageList1.Images[poz_img];
             poz_img++;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            numepasat = "Nino Farina.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Nino Farina";
+            f13.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            numepasat = "Jackie Stewart.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Jackie Stewart";
+            f13.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            numepasat = "Emerson Fittipaldi.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Emerson Fittipaldi";
+            f13.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            numepasat = "Niki Lauda.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Niki Lauda";
+            f13.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            numepasat = "Alain Prost.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Alain Prost";
+            f13.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            numepasat = "Ayrton Senna.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Ayrton Senna";
+            f13.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            numepasat = "Michael Schumacher.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Michael Schumacher";
+            f13.Show();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            numepasat = "Fernando Alonso.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Fernando Alonso";
+            f13.Show();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            numepasat = "Lewis Hamilton.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Lewis Hamilton";
+            f13.Show();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            numepasat = "Sebastian Vettel.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Sebastian Vettel";
+            f13.Show();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            numepasat = "Nico Rosberg.jpeg";
+            Form f13 = new Form13();
+            f13.Text = "Nico Rosberg";
+            f13.Show();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            numepasat = "Max Verstappen.jpg";
+            Form f13 = new Form13();
+            f13.Text = "Max Verstappen";
+            f13.Show();
         }
     }
 }

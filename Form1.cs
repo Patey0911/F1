@@ -353,5 +353,11 @@ namespace F1
             Form f11 = new Form11();
             f11.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form f12 = new Form12();
+            f12.Show();
+        }
     }
 }

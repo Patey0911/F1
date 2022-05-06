@@ -181,7 +181,7 @@ namespace F1
             textBox11.Font = new Font(SmallFont, FontStyle.Bold);
             textBox11.Text = "Nico Rosberg";
 
-            nume_pilot = textBox11.Text + ".jpeg";
+            nume_pilot = textBox11.Text + ".jpg";
             img = System.Drawing.Image.FromFile(string.Concat(path, nume_pilot));
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));

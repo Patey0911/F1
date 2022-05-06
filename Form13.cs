@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +15,8 @@ namespace F1
 {
     public partial class Form13 : Form
     {
+        string[] images;
+        int poz=0;
         Font SmallFont = new Font("Bahnschrift", 12);
         Font bigFont = new Font("Bahnschrift", 10);
         public Form13()
@@ -49,21 +53,27 @@ namespace F1
             return (System.Drawing.Image)b;
         }
 
+        public string[] Images_Read()
+        {
+            char[] MyChar = { '.', 'j', 'p', 'e', 'g' };
+            string nume_pasat_partial = Form12.numepasat.TrimEnd(MyChar);
+            string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path = path_desktop + "\\F1\\HallofFame_img\\" + nume_pasat_partial + "_img";
+            string[] images = Directory.GetFiles(path, "*.jpg");
+            Array.Sort(images);
+            return images;
+        }
+
         private void Form13_Load(object sender, EventArgs e)
         {
-            
-            string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string path = path_desktop + "\\F1\\HallofFame_img\\";
-            Graphics g = Graphics.FromHwnd(Handle);
+            images = Images_Read();
 
-            System.Drawing.Image img = System.Drawing.Image.FromFile(string.Concat(path, Form12.numepasat));
-            Bitmap b = new Bitmap(img);
-            System.Drawing.Image i = resizeImage(b, new Size(1000, 1000));
-            pictureBox1.Image = i;
+            pictureBox1.Image = new Bitmap(images[0]);
 
-            char[] MyChar = { '.', 'j', 'p', 'e', 'g'};
+            char[] MyChar = { '.', 'j', 'p', 'e', 'g' };
             string nume_pasat_partial = Form12.numepasat.TrimEnd(MyChar);
-            Console.Write(nume_pasat_partial); 
+            string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path = path_desktop + "\\F1\\HallofFame_img\\" + nume_pasat_partial + "_img";
             path = path_desktop + "\\F1\\HallofFame\\"+nume_pasat_partial+".txt";
             string[] lines = System.IO.File.ReadAllLines(path);
 
@@ -76,7 +86,6 @@ namespace F1
             label7.Font = new Font(SmallFont, FontStyle.Bold);
             label8.Font = new Font(SmallFont, FontStyle.Bold);
             label9.Font = new Font(SmallFont, FontStyle.Bold);
-            richTextBox1.Font = bigFont;
 
             label1.Text = lines[0];
             label2.Text = lines[1];
@@ -88,12 +97,22 @@ namespace F1
             label8.Text = lines[7];
             label9.Text = lines[8];
 
-            int j = 9;
-            while(j < lines.Length)
-            {
-                richTextBox1.AppendText(lines[j]+"\n");
-                j++;
-            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            poz++;
+            if (poz == images.Length)
+                poz = 0;
+            pictureBox1.Image = new Bitmap(images[poz]);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            poz--;
+            if (poz < 0)
+                poz = images.Length-1;
+            pictureBox1.Image = new Bitmap(images[poz]);
         }
     }
 }

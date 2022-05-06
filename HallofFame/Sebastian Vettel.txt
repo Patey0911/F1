@@ -1,0 +1,10 @@
+Nume: Sebastian Vettel
+Tara: Germania
+Nascut: 03/07/1987
+Decedat: -
+Ani activi: 2007-prezent
+Echipe: Toro Rosso, RedBull Racing, Ferrari, Aston Martin
+Curse: 280
+Victorii: 53
+Titluri de Campion: 4(2010, 2011, 2012, 2013)
+

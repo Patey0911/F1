@@ -1,0 +1,10 @@
+Nume: Nino Farina
+Tara: Italia
+Nascut: 30/10/1906
+Decedat: 30/06/1966
+Ani activi: 1950-1956
+Echipe: Alfa Romeo, Ferrari
+Curse: 37
+Victorii: 5
+Titluri de Campion: 1(1950)
+

@@ -13,6 +13,7 @@ namespace F1
 {
     public partial class Form13 : Form
     {
+        Font SmallFont = new Font("Bahnschrift", 12);
         public Form13()
         {
             InitializeComponent();
@@ -58,6 +59,32 @@ namespace F1
             Bitmap b = new Bitmap(img);
             System.Drawing.Image i = resizeImage(b, new Size(1000, 1000));
             pictureBox1.Image = i;
+
+            char[] MyChar = { '.', 'j', 'p', 'e', 'g'};
+            string nume_pasat_partial = Form12.numepasat.TrimEnd(MyChar);
+            Console.Write(nume_pasat_partial); 
+            path = path_desktop + "\\F1\\HallofFame\\"+nume_pasat_partial+".txt";
+            string[] lines = System.IO.File.ReadAllLines(path);
+
+            label1.Font = new Font(SmallFont,FontStyle.Bold);
+            label2.Font = new Font(SmallFont, FontStyle.Bold);
+            label3.Font = new Font(SmallFont, FontStyle.Bold);
+            label4.Font = new Font(SmallFont, FontStyle.Bold);
+            label5.Font = new Font(SmallFont, FontStyle.Bold);
+            label6.Font = new Font(SmallFont, FontStyle.Bold);
+            label7.Font = new Font(SmallFont, FontStyle.Bold);
+            label8.Font = new Font(SmallFont, FontStyle.Bold);
+            label9.Font = new Font(SmallFont, FontStyle.Bold);
+
+            label1.Text = lines[0];
+            label2.Text = lines[1];
+            label3.Text = lines[2];
+            label4.Text = lines[3];
+            label5.Text = lines[4];
+            label6.Text = lines[5];
+            label7.Text = lines[6];
+            label8.Text = lines[7];
+            label9.Text = lines[8];
         }
     }
 }

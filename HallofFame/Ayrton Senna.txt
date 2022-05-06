@@ -1,0 +1,9 @@
+Nume: Ayrton Senna
+Tara: Brazilia
+Nascut: 21/04/1960
+Decedat: 01/05/1994
+Ani activi: 1984-1994
+Echipe: Lotus, McLaren, Williams
+Curse: 162
+Victorii: 41
+Titluri de Campion: 3(1988, 1990, 1991)

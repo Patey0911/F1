@@ -1,0 +1,10 @@
+Nume: Lewis Hamilton
+Tara: Anglia
+Nascut: 07/01/1985
+Decedat: -
+Ani activi: 2007-prezent
+Echipe: McLaren, Mercedes
+Curse: 288
+Victorii: 103
+Titluri de Campion: 7(2008, 2014, 2015, 2017, 2018, 2019, 2020)
+

@@ -1,0 +1,10 @@
+Nume: Michael Schumacher
+Tara: Germania
+Nascut: 03/01/1969
+Decedat: -
+Ani activi: 1991-2006, 2010-2012
+Echipe: Benetton, Ferrari, Mercedes
+Curse: 308
+Victorii: 91
+Titluri de Campion: 7(1994, 1995, 2000, 2001, 2002, 2003, 2004)
+

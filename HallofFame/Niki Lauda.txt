@@ -1,0 +1,10 @@
+Nume: Niki Lauda
+Tara: Austria
+Nascut: 22/02/1949
+Decedat: 20/05/2019
+Ani activi: 1971-1979, 1982-1985
+Echipe: March, BRM, Ferrari, Brabham, McLaren
+Curse: 174
+Victorii: 25
+Titluri de Campion: 3(1975, 1977, 1984)
+

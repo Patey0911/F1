@@ -1,0 +1,10 @@
+Nume: Emerson Fittipaldi
+Tara: Brazilia
+Nascut: 12/12/1946
+Decedat: -
+Ani activi: 1970-1980
+Echipe: Lotus, McLaren
+Curse: 147
+Victorii: 14
+Titluri de Campion: 2(1972, 1974)
+

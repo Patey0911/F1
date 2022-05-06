@@ -1,0 +1,10 @@
+Nume: Jackie Stewart
+Tara: Anglia
+Nascut: 30/06/1939
+Decedat: -
+Ani activi: 1965-1973
+Echipe: BRM, Matra, March, Tyrrell
+Curse: 100
+Victorii: 27
+Titluri de Campion: 3(1969, 1971, 1973)
+

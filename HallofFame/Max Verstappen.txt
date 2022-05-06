@@ -1,0 +1,10 @@
+Nume: Max Verstappen
+Tara: Olanda
+Nascut: 30/09/1997
+Decedat: -
+Ani activi: 2015-prezent
+Echipe: Toro Rosso, RedBull Racing
+Curse: 141
+Victorii: 21
+Titluri de Campion: 1(2021)
+

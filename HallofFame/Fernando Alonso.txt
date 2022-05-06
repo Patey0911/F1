@@ -1,0 +1,10 @@
+Nume: Fernando Alonso
+Tara: Spania
+Nascut: 29/07/1981
+Decedat: -
+Ani activi: 2001, 2003-2018, 2021-prezent
+Echipe: Renault, McLaren, Ferrari, Alpine
+Curse: 336
+Victorii: 32
+Titluri de Campion: 2(2005, 2006)
+

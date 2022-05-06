@@ -1,0 +1,10 @@
+Nume: Alain Prost
+Tara: Franta
+Nascut: 24/02/1955
+Decedat: -
+Ani activi: 1980-1991
+Echipe: McLaren, Renault, Ferrari, Williams
+Curse: 199
+Victorii: 51
+Titluri de Campion: 4(1985, 1986, 1989, 1993)
+

@@ -206,7 +206,7 @@ namespace F1
             numepasat = "Nino Farina.jpg";
             Form f13 = new Form13();
             f13.Text = "Nino Farina";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -214,7 +214,7 @@ namespace F1
             numepasat = "Jackie Stewart.jpg";
             Form f13 = new Form13();
             f13.Text = "Jackie Stewart";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -222,7 +222,7 @@ namespace F1
             numepasat = "Emerson Fittipaldi.jpg";
             Form f13 = new Form13();
             f13.Text = "Emerson Fittipaldi";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -230,7 +230,7 @@ namespace F1
             numepasat = "Niki Lauda.jpg";
             Form f13 = new Form13();
             f13.Text = "Niki Lauda";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -238,7 +238,7 @@ namespace F1
             numepasat = "Alain Prost.jpg";
             Form f13 = new Form13();
             f13.Text = "Alain Prost";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -246,7 +246,7 @@ namespace F1
             numepasat = "Ayrton Senna.jpg";
             Form f13 = new Form13();
             f13.Text = "Ayrton Senna";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -254,7 +254,7 @@ namespace F1
             numepasat = "Michael Schumacher.jpg";
             Form f13 = new Form13();
             f13.Text = "Michael Schumacher";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -262,7 +262,7 @@ namespace F1
             numepasat = "Fernando Alonso.jpg";
             Form f13 = new Form13();
             f13.Text = "Fernando Alonso";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -270,7 +270,7 @@ namespace F1
             numepasat = "Lewis Hamilton.jpg";
             Form f13 = new Form13();
             f13.Text = "Lewis Hamilton";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -278,7 +278,7 @@ namespace F1
             numepasat = "Sebastian Vettel.jpg";
             Form f13 = new Form13();
             f13.Text = "Sebastian Vettel";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -286,7 +286,7 @@ namespace F1
             numepasat = "Nico Rosberg.jpeg";
             Form f13 = new Form13();
             f13.Text = "Nico Rosberg";
-            f13.Show();
+            f13.ShowDialog();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -294,7 +294,7 @@ namespace F1
             numepasat = "Max Verstappen.jpg";
             Form f13 = new Form13();
             f13.Text = "Max Verstappen";
-            f13.Show();
+            f13.ShowDialog();
         }
     }
 }

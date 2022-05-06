@@ -1,0 +1,10 @@
+Nume: Nico Rosberg
+Tara: Germania
+Nascut: 27/06/1985
+Decedat: -
+Ani activi: 2006-2016
+Echipe: Williams, Mercedes
+Curse: 206
+Victorii: 23
+Titluri de Campion: 1(2016)
+

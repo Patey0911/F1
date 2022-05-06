@@ -14,6 +14,7 @@ namespace F1
     public partial class Form13 : Form
     {
         Font SmallFont = new Font("Bahnschrift", 12);
+        Font bigFont = new Font("Bahnschrift", 10);
         public Form13()
         {
             InitializeComponent();
@@ -75,6 +76,7 @@ namespace F1
             label7.Font = new Font(SmallFont, FontStyle.Bold);
             label8.Font = new Font(SmallFont, FontStyle.Bold);
             label9.Font = new Font(SmallFont, FontStyle.Bold);
+            richTextBox1.Font = bigFont;
 
             label1.Text = lines[0];
             label2.Text = lines[1];
@@ -85,6 +87,13 @@ namespace F1
             label7.Text = lines[6];
             label8.Text = lines[7];
             label9.Text = lines[8];
+
+            int j = 9;
+            while(j < lines.Length)
+            {
+                richTextBox1.AppendText(lines[j]+"\n");
+                j++;
+            }
         }
     }
 }

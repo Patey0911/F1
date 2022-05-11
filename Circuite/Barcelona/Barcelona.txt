@@ -1,0 +1,7 @@
+Nume: Barcelona
+Locatie: Spania
+Circuit Length: 4.675
+Distance: 308.424
+Laps: 66
+Data: 22/05/2022
+

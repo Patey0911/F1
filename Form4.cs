@@ -582,6 +582,7 @@ namespace F1
                 label25.Text = "";
                 label26.Font = BigFont;
                 label26.Text = "Max Verstappen you are the World Champion";
+                button1.Enabled = false;
 
             }
         }

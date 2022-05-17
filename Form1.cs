@@ -360,5 +360,11 @@ namespace F1
             f12.Show();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form f14 = new Form14();
+            f14.Text = "Quotes";
+            f14.Show();
+        }
     }
 }

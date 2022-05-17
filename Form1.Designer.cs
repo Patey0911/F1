@@ -47,6 +47,7 @@ namespace F1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,13 +197,24 @@ namespace F1
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(131, 660);
+            this.button7.Location = new System.Drawing.Point(12, 660);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 62);
+            this.button7.Size = new System.Drawing.Size(224, 62);
             this.button7.TabIndex = 33;
             this.button7.Text = "Hall of Fame";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button8.Location = new System.Drawing.Point(253, 660);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(224, 62);
+            this.button8.TabIndex = 34;
+            this.button8.Text = "Quotes";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
@@ -210,6 +222,7 @@ namespace F1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1019, 747);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label11);
@@ -256,6 +269,7 @@ namespace F1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

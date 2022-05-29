@@ -18,7 +18,7 @@
 18th Place: Latifi
 19th Place: Tsunoda
 20th Place: Schumacher
-Pole: Perez(1:28.200s)
-Fastest Lap: Leclerc(1:31.634)
+Pole: Perez
+Fastest Lap: Leclerc
 False
 100

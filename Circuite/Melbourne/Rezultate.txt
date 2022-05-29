@@ -18,7 +18,7 @@
 18th Place: Verstappen
 19th Place: Vettel
 20th Place: Sainz
-Pole: Leclerc(1:17.868)
-Fastest Lap: Leclerc(1:20.260)
+Pole: Leclerc
+Fastest Lap: Leclerc
 False
 100

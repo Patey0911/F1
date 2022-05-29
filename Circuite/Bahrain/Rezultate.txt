@@ -18,7 +18,7 @@
 18th Place: Perez
 19th Place: Verstappen
 20th Place: Gasly
-Pole: Leclerc(1:30.558)
-Fastest Lap: Leclerc(1:34.570)
+Pole: Leclerc
+Fastest Lap: Leclerc
 False
 100

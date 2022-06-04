@@ -1,0 +1,7 @@
+Nume: Baku
+Locatie: Azerbaijan
+Circuit Length: 6.003
+Distance: 306.049
+Laps: 51
+Data: 12/06/2022
+

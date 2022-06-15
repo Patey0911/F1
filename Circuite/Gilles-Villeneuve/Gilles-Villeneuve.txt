@@ -1,0 +1,7 @@
+Nume: Gilles-Villeneuve
+Locatie: Canada
+Circuit Length: 4.361
+Distance: 305.27
+Laps: 70
+Data: 19/06/2022
+

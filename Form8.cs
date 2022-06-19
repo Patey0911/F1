@@ -36,7 +36,7 @@ namespace F1
 
             objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             objChart.AxisY.Minimum = 0;
-            objChart.AxisY.Maximum = 150;
+            objChart.AxisY.Maximum = 250;
 
             chart1.Series.Clear();
 

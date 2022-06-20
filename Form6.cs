@@ -767,6 +767,8 @@ namespace F1
                                 lista_piloti[poz].Puncte = 1;
                             break;
                     }
+                    if (lines[21].Contains(nume_pilot) == true)
+                        lista_piloti[poz].Puncte = 1;
                     if (lines[22].Contains("True") == true)
                     {
                         if (lines[24].Contains(nume_pilot) == true)

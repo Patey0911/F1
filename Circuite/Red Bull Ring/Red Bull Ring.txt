@@ -1,0 +1,7 @@
+Nume: Red Bull Ring
+Locatie: Austria
+Circuit Length: 4.318
+Distance: 306.452
+Laps: 71
+Data: 10/07/2022
+

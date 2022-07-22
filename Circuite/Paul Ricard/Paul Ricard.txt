@@ -1,0 +1,7 @@
+Nume: Paul Ricard
+Locatie: Franta
+Circuit Length: 5.842
+Distance: 309.69
+Laps: 53
+Data: 24/07/2022
+

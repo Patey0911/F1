@@ -1,0 +1,7 @@
+Nume: Singapore
+Locatie: Singapore
+Circuit Length: 5.063
+Distance: 308.706
+Laps: 61
+Data: 2/10/2022
+

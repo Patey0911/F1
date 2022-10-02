@@ -1,0 +1,7 @@
+Nume: Suzuka
+Locatie: Japonia
+Circuit Length: 5.807
+Distance: 307.471
+Laps: 53
+Data: 9/10/2022
+

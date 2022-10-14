@@ -191,7 +191,7 @@ namespace F1
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Circuit of the Americas_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Austin_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
@@ -295,7 +295,7 @@ namespace F1
                 case "Suzuka":
                     pictureBox1.Image = imageList1.Images[17];
                     break;
-                case "Circuit of the Americas":
+                case "Austin":
                     pictureBox1.Image = imageList1.Images[18];
                     break;
                 case "Autodromo Hermanos Rodriguez":

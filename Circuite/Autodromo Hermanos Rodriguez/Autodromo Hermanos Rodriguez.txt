@@ -1,0 +1,7 @@
+Nume: Autodromo Hermanos Rodriguez
+Locatie: Mexic
+Circuit Length: 4.304
+Distance: 305.354
+Laps: 71
+Data: 30/10/2022
+

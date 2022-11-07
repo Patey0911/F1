@@ -201,7 +201,7 @@ namespace F1
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Autodromo Jose Carlos Pace_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Sao Paulo_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
@@ -301,7 +301,7 @@ namespace F1
                 case "Autodromo Hermanos Rodriguez":
                     pictureBox1.Image = imageList1.Images[19];
                     break;
-                case "Autodromo Carlos Pace":
+                case "Sao Paulo":
                     pictureBox1.Image = imageList1.Images[20];
                     break;
                 case "Yas Marina":

@@ -1,0 +1,7 @@
+Nume: Sao Paulo
+Locatie: Brazilia
+Circuit Length: 4.309
+Distance: 305.879
+Laps: 71
+Data: 13/11/2022
+

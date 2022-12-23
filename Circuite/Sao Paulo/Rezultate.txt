@@ -1,0 +1,33 @@
+1st Place: Russel
+2nd Place: Hamilton
+3rd Place: Sainz
+4th Place: Leclerc
+5th Place: Alonso
+6th Place: Verstappen
+7th Place: Perez
+8th Place: Ocon
+9th Place: Bottas
+10th Place: Stroll
+11th Place: Vettel
+12th Place: Gasly
+13th Place: Zhou
+14th Place: Schumacher
+15th Place: Albon
+16th Place: Latifi
+17th Place: Tsunoda
+18th Place: Norris
+19th Place: Ricciardo
+20th Place: Magnussen
+Pole: Magnussen
+Fastest Lap: Russel
+True
+100
+1st Place Sprint: Russel
+2nd Place Sprint: Sainz
+3rd Place Sprint: Hamilton
+4th Place Sprint: Verstappen
+5th Place Sprint: Perez
+6th Place Sprint: Leclerc
+7th Place Sprint: Norris
+8th Place Sprint: Bottas
+

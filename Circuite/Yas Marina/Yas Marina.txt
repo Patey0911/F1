@@ -1,0 +1,7 @@
+Nume: Yas Marina
+Locatie: Abu Dhabi
+Circuit Length: 5.281
+Distance: 306.183
+Laps: 58
+Data: 20/11/2022
+

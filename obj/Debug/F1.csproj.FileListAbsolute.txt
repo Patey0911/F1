@@ -22,3 +22,4 @@ C:\Users\mihal\Desktop\F1\obj\Debug\F1.Form11.resources
 C:\Users\mihal\Desktop\F1\obj\Debug\F1.Form12.resources
 C:\Users\mihal\Desktop\F1\obj\Debug\F1.Form13.resources
 C:\Users\mihal\Desktop\F1\obj\Debug\F1.Form14.resources
+C:\Users\mihal\Desktop\F1\obj\Debug\F1.First.resources

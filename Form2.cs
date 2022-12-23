@@ -44,8 +44,8 @@ namespace F1
             traseu = new Circuit(nume, locatie, lungime, distanta, laps,data);
 
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            Directory.CreateDirectory(path_desktop+"\\F1\\Circuite\\" + nume);
-            string fileName = path_desktop+"\\F1\\Circuite\\" + nume+"\\"+nume+".txt";
+            Directory.CreateDirectory(path_desktop+ "\\F1\\2021\\Circuite\\" + nume);
+            string fileName = path_desktop+ "\\F1\\2021\\Circuite\\" + nume+"\\"+nume+".txt";
             if (File.Exists(fileName))
             {
                 File.Delete(fileName);

@@ -78,15 +78,15 @@ namespace F1
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             foreach (Echipa ech in lista_echipe)
             {
-                string[] lines = System.IO.File.ReadAllLines(path_desktop+"\\F1\\RezultateEchipe\\"+ech.Nume+".txt");
+                string[] lines = System.IO.File.ReadAllLines(path_desktop+ "\\F1\\2021\\RezultateEchipe\\" + ech.Nume+".txt");
                 ech.Puncte = Int32.Parse(lines[0]);
             }
             Compara_punctaj_echipe comp = new Compara_punctaj_echipe();
             lista_echipe.Sort(comp);
 
-            string path_pilot = path_desktop+"\\F1\\Ploti_Echipe_img\\";
-            string path_logo = path_desktop+"\\F1\\Logo_img\\";
-            string path_masina = path_desktop+"\\F1\\Masini_img\\";
+            string path_pilot = path_desktop+ "\\F1\\2021\\Ploti_Echipe_img\\";
+            string path_logo = path_desktop+ "\\F1\\2021\\Logo_img\\";
+            string path_masina = path_desktop+ "\\F1\\2021\\Masini_img\\";
             Graphics g = Graphics.FromHwnd(Handle);
             PilotsList.ColorDepth = ColorDepth.Depth32Bit;
             PilotsList.ImageSize = new Size(255, 255);

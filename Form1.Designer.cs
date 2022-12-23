@@ -54,17 +54,19 @@ namespace F1
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 10);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(465, 570);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(349, 463);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(12, 592);
+            this.button1.Location = new System.Drawing.Point(9, 481);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 62);
+            this.button1.Size = new System.Drawing.Size(168, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "New Track";
             this.button1.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@ namespace F1
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(483, 520);
+            this.button2.Location = new System.Drawing.Point(362, 422);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 62);
+            this.button2.Size = new System.Drawing.Size(180, 50);
             this.button2.TabIndex = 2;
             this.button2.Text = "Drivers Rankings";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,9 +87,10 @@ namespace F1
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(483, 588);
+            this.button3.Location = new System.Drawing.Point(362, 478);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(500, 62);
+            this.button3.Size = new System.Drawing.Size(375, 50);
             this.button3.TabIndex = 3;
             this.button3.Text = "Constructors Rankings";
             this.button3.UseVisualStyleBackColor = true;
@@ -95,9 +99,10 @@ namespace F1
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(253, 592);
+            this.button4.Location = new System.Drawing.Point(190, 481);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(224, 62);
+            this.button4.Size = new System.Drawing.Size(168, 50);
             this.button4.TabIndex = 5;
             this.button4.Text = "Enter Results";
             this.button4.UseVisualStyleBackColor = true;
@@ -106,54 +111,60 @@ namespace F1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(503, 303);
+            this.label6.Location = new System.Drawing.Point(377, 246);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 24;
             this.label6.Text = "label6";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(503, 333);
+            this.label7.Location = new System.Drawing.Point(377, 271);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 25;
             this.label7.Text = "label7";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(503, 363);
+            this.label8.Location = new System.Drawing.Point(377, 295);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 26;
             this.label8.Text = "label8";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(503, 393);
+            this.label9.Location = new System.Drawing.Point(377, 319);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 27;
             this.label9.Text = "label9";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(503, 423);
+            this.label10.Location = new System.Drawing.Point(377, 344);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 28;
             this.label10.Text = "label10";
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(611, 656);
+            this.button5.Location = new System.Drawing.Point(458, 533);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 62);
+            this.button5.Size = new System.Drawing.Size(180, 50);
             this.button5.TabIndex = 29;
             this.button5.Text = "Show Results";
             this.button5.UseVisualStyleBackColor = true;
@@ -168,17 +179,19 @@ namespace F1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(503, 453);
+            this.label11.Location = new System.Drawing.Point(377, 368);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 16);
+            this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 31;
             this.label11.Text = "label1";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(506, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(380, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(477, 270);
+            this.pictureBox1.Size = new System.Drawing.Size(358, 219);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -186,9 +199,10 @@ namespace F1
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button6.Location = new System.Drawing.Point(743, 520);
+            this.button6.Location = new System.Drawing.Point(557, 422);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(240, 62);
+            this.button6.Size = new System.Drawing.Size(180, 50);
             this.button6.TabIndex = 32;
             this.button6.Text = "Drivers Evolution";
             this.button6.UseVisualStyleBackColor = true;
@@ -197,9 +211,10 @@ namespace F1
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(12, 660);
+            this.button7.Location = new System.Drawing.Point(9, 536);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(224, 62);
+            this.button7.Size = new System.Drawing.Size(168, 50);
             this.button7.TabIndex = 33;
             this.button7.Text = "Hall of Fame";
             this.button7.UseVisualStyleBackColor = true;
@@ -208,9 +223,10 @@ namespace F1
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(253, 660);
+            this.button8.Location = new System.Drawing.Point(190, 536);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(224, 62);
+            this.button8.Size = new System.Drawing.Size(168, 50);
             this.button8.TabIndex = 34;
             this.button8.Text = "Quotes";
             this.button8.UseVisualStyleBackColor = true;
@@ -218,10 +234,10 @@ namespace F1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1019, 747);
+            this.ClientSize = new System.Drawing.Size(764, 607);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -240,10 +256,11 @@ namespace F1
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Formula1";
+            this.Text = "Formula1 2021";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

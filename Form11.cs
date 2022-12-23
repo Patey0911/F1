@@ -17,7 +17,7 @@ namespace F1
         int poz_vect = 0;
         int k;
         static string path_desktop1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        static DirectoryInfo path = new DirectoryInfo(path_desktop1 + "\\F1\\Circuite");
+        static DirectoryInfo path = new DirectoryInfo(path_desktop1 + "\\F1\\2021\\Circuite");
         DirectoryInfo[] dirs = path.GetDirectories();
 
         string nume_pilot;
@@ -269,10 +269,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Perez";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -332,10 +332,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Leclerc";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -395,10 +395,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Sainz";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -458,10 +458,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Hamilton";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -521,10 +521,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Russel";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -584,10 +584,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Norris";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -647,10 +647,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Ricciardo";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -710,10 +710,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Gasly";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -773,10 +773,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Tsunoda";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -836,10 +836,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Vettel";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -899,10 +899,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Stroll";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -962,10 +962,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Ocon";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1025,10 +1025,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Alonso";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1088,10 +1088,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Albon";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1151,10 +1151,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Latifi";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1214,10 +1214,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Bottas";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1277,10 +1277,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Zhou";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1340,10 +1340,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Magnussen";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);
@@ -1403,10 +1403,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Schumacher";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);

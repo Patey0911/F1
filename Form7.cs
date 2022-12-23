@@ -36,7 +36,7 @@ namespace F1
         private void button1_Click(object sender, EventArgs e)
         {
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string fileName = path_desktop + "\\F1\\Circuite\\" + Form1.traseu_selectat + "\\Rezultate" + ".txt";
+            string fileName = path_desktop + "\\F1\\2021\\Circuite\\" + Form1.traseu_selectat + "\\Rezultate" + ".txt";
             nume_pilot_sprint[0] = "1st Place Sprint: " + textBox1.Text;
             nume_pilot_sprint[1] = "2nd Place Sprint: " + textBox2.Text;
             nume_pilot_sprint[2] = "3rd Place Sprint: " + textBox3.Text;

@@ -55,14 +55,14 @@ namespace F1
         private void Form10_Load(object sender, EventArgs e)
         {
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string path = path_desktop + "\\F1\\Piloti_img\\";
+            string path = path_desktop + "\\F1\\2021\\Piloti_img\\";
             Graphics g = Graphics.FromHwnd(Handle);
             imageList2.ColorDepth = ColorDepth.Depth32Bit;
             imageList2.ImageSize = new Size(255, 255);
 
-            if (File.Exists(path_desktop + "\\F1\\Circuite\\" + Form1.traseu_selectat + "\\" + "Rezultate" + ".txt"))
+            if (File.Exists(path_desktop + "\\F1\\2021\\Circuite\\" + Form1.traseu_selectat + "\\" + "Rezultate" + ".txt"))
             {
-                string[] lines = System.IO.File.ReadAllLines(path_desktop + "\\F1\\Circuite\\" + Form1.traseu_selectat + "\\" + "Rezultate" + ".txt");
+                string[] lines = System.IO.File.ReadAllLines(path_desktop + "\\F1\\2021\\Circuite\\" + Form1.traseu_selectat + "\\" + "Rezultate" + ".txt");
                 textBox1.Font = new Font(SmallFont1, FontStyle.Bold);
                 textBox2.Font = new Font(SmallFont1, FontStyle.Bold);
                 textBox3.Font = new Font(SmallFont1, FontStyle.Bold);

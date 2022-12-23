@@ -149,14 +149,14 @@ namespace F1
             int k;
             Curatenie();
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            DirectoryInfo path = new DirectoryInfo(path_desktop+"\\F1\\Circuite");
+            DirectoryInfo path = new DirectoryInfo(path_desktop+ "\\F1\\2021\\Circuite");
             DirectoryInfo[] dirs = path.GetDirectories();
             foreach (DirectoryInfo dir in dirs.OrderBy(dir=>dir.LastWriteTime))
             {
-                string nume_director = path_desktop + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                string nume_director = path_desktop + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                 if (File.Exists(nume_director))
                 {
-                    string[] lines = System.IO.File.ReadAllLines(path_desktop + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                    string[] lines = System.IO.File.ReadAllLines(path_desktop + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                     if (lines[23].Contains("100"))
                         k = 1;
                     else if (lines[23].Contains("75"))
@@ -2275,7 +2275,7 @@ namespace F1
         {
             int poz_img=-1;
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string path = path_desktop+"\\F1\\Piloti_img\\";
+            string path = path_desktop+ "\\F1\\2021\\Piloti_img\\";
             Graphics g = Graphics.FromHwnd(Handle);
             imageListPiloti.ColorDepth = ColorDepth.Depth32Bit;
             imageListPiloti.ImageSize = new Size(255, 255);
@@ -2586,8 +2586,8 @@ namespace F1
             poz_img++;
             pictureBox19.Image = imageListPiloti.Images[poz_img];
 
-            Directory.CreateDirectory(path_desktop+"\\F1\\RezultateEchipe");
-            string fileName = path_desktop+"\\F1\\RezultateEchipe\\";
+            Directory.CreateDirectory(path_desktop+ "\\F1\\2021\\RezultateEchipe");
+            string fileName = path_desktop+ "\\F1\\2021\\RezultateEchipe\\";
             if (File.Exists(fileName))
             {
                 File.Delete(fileName);
@@ -2650,7 +2650,7 @@ namespace F1
 
             foreach (Pilot pil in lista_piloti)
             {
-                string[] lines = System.IO.File.ReadAllLines(path_desktop+"\\F1\\RezultateEchipe\\"+pil.echipa+ ".txt");
+                string[] lines = System.IO.File.ReadAllLines(path_desktop+ "\\F1\\2021\\RezultateEchipe\\" + pil.echipa+ ".txt");
                 int punctaj = Int32.Parse(lines[0]);
                 punctaj = punctaj + pil.puncte;
                 using (StreamWriter sw = File.CreateText(fileName + pil.echipa + ".txt"))

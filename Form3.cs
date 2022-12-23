@@ -77,7 +77,7 @@ namespace F1
             nume_pilot[21] = "Fastest Lap: " + textBox22.Text;
 
             string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string fileName = path_desktop+"\\F1\\Circuite\\" + Form1.traseu_selectat +"\\Rezultate"+ ".txt";
+            string fileName = path_desktop+ "\\F1\\2021\\Circuite\\" + Form1.traseu_selectat +"\\Rezultate"+ ".txt";
 
             if (File.Exists(fileName))
             {

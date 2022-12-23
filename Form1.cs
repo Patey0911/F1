@@ -25,7 +25,7 @@ namespace F1
         public void Init_flowLayoutPanel1()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            DirectoryInfo d = new DirectoryInfo(path +"\\F1\\Circuite");
+            DirectoryInfo d = new DirectoryInfo(path +"\\F1\\2021\\Circuite");
             DirectoryInfo[] dirs = d.GetDirectories();
 
             foreach (DirectoryInfo dir in dirs.OrderBy(dir=>dir.LastWriteTime))
@@ -101,117 +101,118 @@ namespace F1
             imageList1.ColorDepth = ColorDepth.Depth32Bit;
             imageList1.ImageSize = new Size(255, 255);
 
-            System.Drawing.Image img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Bahrain_img.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Bahrain_img.png");
+            //"C:\Users\mihal\Desktop\F1\2021\Circuite_img\Bahrain_img.png"
             Bitmap b = new Bitmap(img);
             System.Drawing.Image i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Jeddah_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Jeddah_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Melbourne_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Melbourne_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Dell'Emilia-Romagna_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Dell'Emilia-Romagna_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Miami_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Miami_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Barcelona_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Barcelona_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Monaco_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Monaco_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Baku_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Baku_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Gilles-Villeneuve_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Gilles-Villeneuve_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Silverstone_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Silverstone_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Red Bull Ring_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Red Bull Ring_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Paul Ricard_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Paul Ricard_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Hungaroring_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Hungaroring_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Spa_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Spa_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Zandvoort_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Zandvoort_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Monza_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Monza_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Marina Bay_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Marina Bay_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Suzuga_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Suzuga_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Austin_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Austin_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Autodromo Hermanos Rodriguez_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Autodromo Hermanos Rodriguez_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Sao Paulo_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Sao Paulo_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\Yas Marina_img.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\Yas Marina_img.png");
             b = new Bitmap(img);
             i = resizeImage(b, new Size(1000, 1000));
             imageList1.Images.Add(i);
 
-            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\Circuite_img\\f1Logo.png");
+            img = System.Drawing.Image.FromFile(path_desktop + "\\F1\\2021\\Circuite_img\\f1Logo.png");
             b = new Bitmap(img);
             imageList1.Images.Add(b);
         }
@@ -222,7 +223,7 @@ namespace F1
             Circuit j = (Circuit)btn.Tag;
             traseu_selectat = btn.Text;
 
-            string[] lines = System.IO.File.ReadAllLines(path_desktop+"\\F1\\Circuite\\" + btn.Text + "\\" + btn.Text + ".txt");
+            string[] lines = System.IO.File.ReadAllLines(path_desktop+ "\\F1\\2021\\Circuite\\" + btn.Text + "\\" + btn.Text + ".txt");
 
             label6.Font = SmallFont;
             label7.Font = SmallFont;

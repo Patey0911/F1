@@ -22,5 +22,11 @@ namespace F1
             Form f1 = new Form1();
             f1.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form f21 = new Form21();
+            f21.Show();
+        }
     }
 }

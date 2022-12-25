@@ -589,7 +589,7 @@ namespace F1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form10 f4 = new Form10();
+            Form30 f4 = new Form30();
             f4.Show();
         }
     }

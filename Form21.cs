@@ -367,7 +367,7 @@ namespace F1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form f11 = new Form11();
+            Form f11 = new Form31();
             f11.Show();
         }
 

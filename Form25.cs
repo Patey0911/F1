@@ -229,7 +229,7 @@ namespace F1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form9 f = new Form9();
+            Form29 f = new Form29();
             f.Show();
         }
     }

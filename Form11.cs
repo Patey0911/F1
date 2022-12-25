@@ -205,10 +205,10 @@ namespace F1
             {
                 foreach (DirectoryInfo dir in dirs.OrderBy(dir => dir.LastWriteTime))
                 {
-                    string nume_director = path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
+                    string nume_director = path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt";
                     if (File.Exists(nume_director))
                     {
-                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
+                        string[] lines = System.IO.File.ReadAllLines(path_desktop1 + "\\F1\\2021\\Circuite\\" + dir.Name + "\\" + "Rezultate.txt");
                         string nume_pilot = "Verstappen";
                         if (lines[0].Contains(nume_pilot) == true)
                             chart1.Series[nume_pilot].Points.AddXY(cnt, 1);

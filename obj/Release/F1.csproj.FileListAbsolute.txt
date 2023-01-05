@@ -22,3 +22,15 @@ C:\Users\mihal\Desktop\F1\obj\Release\F1.Form11.resources
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form12.resources
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form13.resources
 C:\Users\mihal\Desktop\F1\obj\Release\F1.Form14.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.First.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form21.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form22.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form23.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form24.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form25.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form26.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form27.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form28.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form29.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form30.resources
+C:\Users\mihal\Desktop\F1\obj\Release\F1.Form31.resources

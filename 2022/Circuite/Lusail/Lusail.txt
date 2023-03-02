@@ -1,7 +1,0 @@
-Nume: Lusail
-Locatie: asd
-Circuit Length: 32
-Distance: 32
-Laps: 32
-Data: 24/12/2022
-

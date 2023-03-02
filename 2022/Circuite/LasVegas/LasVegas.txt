@@ -1,7 +1,0 @@
-Nume: LasVegas
-Locatie: ads
-Circuit Length: 323
-Distance: 23
-Laps: 32
-Data: 24/12/2022
-

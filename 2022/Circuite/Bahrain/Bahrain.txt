@@ -1,7 +1,7 @@
 Nume: Bahrain
-Locatie: asd
-Circuit Length: 5.43
-Distance: 300
-Laps: 70
-Data: 5/03/2023
+Locatie: Bahrain
+Circuit Length: 5.412
+Distance: 308.238
+Laps: 57
+Data: 05/03/2022 
 

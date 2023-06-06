@@ -1,0 +1,24 @@
+1st Place: Verstappen
+2nd Place: Alonso
+3rd Place: Ocon
+4th Place: Hamilton
+5th Place: Russel
+6th Place: Leclerc
+7th Place: Gasly
+8th Place: Sainz
+9th Place: Norris
+10th Place: Piastri
+11th Place: Bottas
+12th Place: DeVries
+13th Place: Zhou
+14th Place: Albon
+15th Place: Tsunoda
+16th Place: Perez
+17th Place: Hulkenberg
+18th Place: Sargeant
+19th Place: Magnussen
+20th Place: Stroll
+Pole: Verstappen
+Fastest Lap: Hamilton
+False
+100

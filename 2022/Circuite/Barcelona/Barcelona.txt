@@ -1,0 +1,7 @@
+Nume: Barcelona
+Locatie: Spania
+Circuit Length: 4.657
+Distance: 307.236
+Laps: 66
+Data: 4/06/2023
+

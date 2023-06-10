@@ -35,7 +35,7 @@ namespace F1
 
             objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             objChart.AxisY.Minimum = 0;
-            objChart.AxisY.Maximum = 200;
+            objChart.AxisY.Maximum = 300;
 
             chart2.Series.Clear();
             string nume_echipa;
